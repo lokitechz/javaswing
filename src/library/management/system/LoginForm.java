@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 import library.management.system.Java.MySQLConnUtils;
 import org.apache.commons.codec.digest.DigestUtils;
 
@@ -20,7 +21,7 @@ import org.apache.commons.codec.digest.DigestUtils;
  * @author CMC-GLOBAL
  */
 public class LoginForm extends javax.swing.JFrame {
-
+    
     Connection con;
     ResultSet rs;
     PreparedStatement ps;
@@ -201,6 +202,7 @@ public class LoginForm extends javax.swing.JFrame {
             if (rs.next()) {
                 setVisible(false);
                 Loading ob = new Loading();
+                ob.setUpLoading();
                 ob.setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(null, "Tài khoản hoặc mật khẩu không đúng");
@@ -221,10 +223,7 @@ public class LoginForm extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
+                UIManager.setLookAndFeel("com.jtattoo.plaf.acryl.AcrylLookAndFeel");
             }
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(LoginForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
