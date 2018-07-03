@@ -77,7 +77,7 @@ public class Loading extends javax.swing.JFrame implements Runnable {
 
         jLabel2.setText("Đang tải ...");
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\CMC-GLOBAL\\Desktop\\book4.gif")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Library Icon/book4.gif"))); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 153, 153));
@@ -96,8 +96,7 @@ public class Loading extends javax.swing.JFrame implements Runnable {
                         .addGap(76, 76, 76))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(35, Short.MAX_VALUE)
